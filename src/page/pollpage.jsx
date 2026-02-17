@@ -239,7 +239,7 @@ useEffect(() => {
                 return (
                   <div key={index} className="mb-4"
                   onClick={() => navigate(`/poll/${poll._id}`)}  >
-                    <div className="flex justify-between mb-1"
+                    <div className="flex justify-between mb-1 hover:pointer-coarse cursor-auto"
                     >
                       <span>{option.text}</span>
                       <span>{option.votes} votes ({percentage}%)</span>
