@@ -12,7 +12,7 @@ export default function Polcreate() {
   const [options, setOptions] = useState(["", ""]);
   const [token, setToken] = useState(localStorage.getItem("token"));
 
-  const API = "http://localhost:5000/api/polls";
+  const API = "https://poll-backend-2gxa.onrender.com/api/polls";
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -27,7 +27,7 @@ export default function Polcreate() {
     }
   };
 useEffect(() => {
-  const socket = io("http://localhost:5000");
+  const socket = io("https://poll-backend-2gxa.onrender.com");
 
   socket.on("pollUpdated", (updatedPoll) => {
     setPolls(prev =>

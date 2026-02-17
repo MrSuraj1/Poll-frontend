@@ -27,7 +27,7 @@ const handleSubmit = async (e) => {
   setError("");
 
   try {
-    const url = `http://localhost:5000/api/auth/${currentMode}`;
+    const url = `https://poll-backend-2gxa.onrender.com/api/auth/${currentMode}`;
     const res = await axios.post(url, { email, password });
 
     // Save token
