@@ -189,6 +189,7 @@ useEffect(() => {
                 newOptions[index] = e.target.value;
                 setOptions(newOptions);
               }}
+              
               className="w-full border p-3 rounded-lg mb-3"
             />
           ))}
@@ -236,8 +237,10 @@ useEffect(() => {
                     : ((option.votes / totalVotes) * 100).toFixed(1);
 
                 return (
-                  <div key={index} className="mb-4">
-                    <div className="flex justify-between mb-1">
+                  <div key={index} className="mb-4"
+                  onClick={() => navigate(`/poll/${poll._id}`)}  >
+                    <div className="flex justify-between mb-1"
+                    >
                       <span>{option.text}</span>
                       <span>{option.votes} votes ({percentage}%)</span>
                     </div>
